@@ -43,7 +43,7 @@ useEffect(() =>  {
   startTime();
   
 
-  const txt_typing = 'O Rato roeu a Roupa do rei'
+  const txt_typing = 'If YOU CAN DREAM IT,YOU CAN DO IT!'
   const array = txt_typing.split(" ")
   
   setArrayTexto(array)
@@ -58,15 +58,7 @@ function handleChange(event: ChangeEvent<HTMLInputElement>){
 
   setInputTexto(event.target.value)
 
-  let txt = 'O Rato roeu a Roupa do rei';
- let inp = inputTexto.length +1
- console.log(inputTexto.length)
-  if(inp === txt.length){
-    console.log('mesmo tamanho')
-  }
 
-
-  
 }
 function handleKeyUp(event: React.KeyboardEvent<HTMLElement>){
 
@@ -95,7 +87,7 @@ function handleKeyUp(event: React.KeyboardEvent<HTMLElement>){
     <Container>
       <Content>
           <Timer time={timeStart.time} />
-          <span>IF YOU CAN DREAM IT,YOU CAN DO IT!</span>
+          <span>If YOU CAN DREAM IT,YOU CAN DO IT!</span>
 
           <Input type="text" name="txtInput" onChange={handleChange} onKeyUp={handleKeyUp} error={error}/>
 
