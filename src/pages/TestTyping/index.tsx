@@ -38,10 +38,7 @@ useEffect(() =>  {
       clearTimeout(timer);
     };
 
-    //clearTimeout(timer);
-    // setTimeStart({time:timeStart.time,timer})
-
-    // return timeStart
+    
   }
   startTime();
   
@@ -71,20 +68,12 @@ function handleChange(event: ChangeEvent<HTMLInputElement>){
 
   
 }
-function handleKeyPress(event: React.KeyboardEvent<HTMLElement>){
+function handleKeyUp(event: React.KeyboardEvent<HTMLElement>){
 
   if(event.code === 'Space' ){
     
     let arr = inputTexto.split(" ")
    
-    // arr.map((elem,index) => {
-      
-    //   if(arrayTexto[index -1] !== elem){
-       
-    //     console.log(elem)
-    //   }
-    //   return index
-    // })
 
     for(let i=0; i < arr.length - 1;i++){
 
@@ -106,9 +95,9 @@ function handleKeyPress(event: React.KeyboardEvent<HTMLElement>){
     <Container>
       <Content>
           <Timer time={timeStart.time} />
-          <span>O Rato roeu a Roupa do rei</span>
+          <span>IF YOU CAN DREAM IT,YOU CAN DO IT!</span>
 
-          <Input type="text" name="txtInput" onChange={handleChange} onKeyUp={handleKeyPress} error={error}/>
+          <Input type="text" name="txtInput" onChange={handleChange} onKeyUp={handleKeyUp} error={error}/>
 
       </Content>
     </Container>
